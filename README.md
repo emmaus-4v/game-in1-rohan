@@ -15,14 +15,23 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] laat 1 speler bewegen met wasd
 - [ ] zorg dat bal eenvoudig kaatst op 1 speler
 - [ ] zorg dat je detecteert als bal in goal zit en geef nieuwe bal
+<<<<<<< HEAD
 - [ ] unt als bal in goal zit en tonen punten op scherm
+=======
+- [ ] punt als bal in goal zit en tonen punten op scherm
+>>>>>>> a74763c75db774f241c5c5b6991e9e6e4911a4b3
 - [ ] bij 5 punten spel game over
 - [ ] maak startscherm en zorg dat je met toetsindruk kunt starten
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] 2e speler, zonder veel extra code
+<<<<<<< HEAD
 - [ ] *later uitwerken*
 - [ ] *later uitwerken*
+=======
+- [ ] ...
+- [ ] ...
+>>>>>>> a74763c75db774f241c5c5b6991e9e6e4911a4b3
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
 - [ ] *later uitwerken*
