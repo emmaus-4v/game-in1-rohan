@@ -25,8 +25,8 @@ var spelStatus = SPELEN;
 var spelerX = 0; // x-positie van speler
 var spelerY = 0; // y-positie van speler
 
-var kogelX = 400;    // x-positie van kogel
-var kogelY = 400;    // y-positie van kogel
+var kogelX = 0;    // x-positie van kogel
+var kogelY = 0;    // y-positie van kogel
 
 var vijandX = 0;   // x-positie van vijand
 var vijandY = 0;   // y-positie van vijand
@@ -79,8 +79,10 @@ fill("orange");
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenSpeler = function(x, y) {
- 
+var tekenSpeler1 = function(x, y) {
+ fill("purple");
+    ellipse(100, 350, 70, 70);
+
 };
 
 
@@ -105,7 +107,7 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
-
+if keyIsDown(87) {}
 };
 
 
@@ -179,7 +181,7 @@ function draw() {
       tekenVeld();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
-      tekenSpeler(spelerX, spelerY);
+      tekenSpeler1(spelerX, spelerY);
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
