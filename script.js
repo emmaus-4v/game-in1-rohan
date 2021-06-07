@@ -46,7 +46,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("black");
+  fill("white");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -57,7 +57,8 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
+    fill("green");
+        rect(1150, 300, 20, 100);
 
 };
 
@@ -69,7 +70,7 @@ var tekenVijand = function(x, y) {
  */
 var tekenKogel = function(x, y) {
 fill("orange");
-  ellipse(625, 350, 50, 50);
+  ellipse(650, 350, 50, 50);
 
 };
 
@@ -81,7 +82,7 @@ fill("orange");
  */
 var tekenSpeler1 = function(x, y) {
  fill("purple");
-    ellipse(100, 350, 70, 70);
+    rect(100, 300, 20, 100);
 
 };
 
@@ -106,10 +107,6 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
-var beweegSpeler = function() {
-if keyIsDown(87) {}
-};
-
 
 /**
  * Zoekt uit of de vijand is geraakt
@@ -166,7 +163,7 @@ function draw() {
     case SPELEN:
       beweegVijand();
       beweegKogel();
-      beweegSpeler();
+   
       
       if (checkVijandGeraakt()) {
         // punten erbij
