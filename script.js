@@ -22,13 +22,13 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 0; // x-positie van speler
+var SpelerX = 0; // x-positie van speler
 var Speler1Y = 300; // y-positie van speler
 
 var KogelX = 650;    // x-positie van kogel
 var KogelY = 350;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
+var Speler2X = 1150;   // x-positie van vijand
 var Speler2Y = 300;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
@@ -50,7 +50,7 @@ background('blue');
     rect(20, 20, width - 2 * 20, height - 2 * 20);
 
         fill("green");
-        rect(1150, Speler2Y, 20, 100);
+        rect(Speler2X, Speler2Y, 20, 100);
 
 if (keyIsDown(UP_ARROW)) {
     Speler2Y -= 5
@@ -62,9 +62,9 @@ if (keyIsDown(DOWN_ARROW)) {
         fill("orange");
   ellipse(KogelX, KogelY, 50, 50);
 
-KogelX += 5
-if (KogelY === Speler2Y) {KogelX -=5};
 
+if (KogelY <= Speler2Y+150 && KogelY >= 50 && KogelX === Speler2X-10) {KogelX -=10}
+else {KogelX += 5};
     
     fill("purple");
     rect(100, Speler1Y, 20, 100);
