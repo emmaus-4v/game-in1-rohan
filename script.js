@@ -22,11 +22,12 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var SpelerX = 0; // x-positie van speler
+var Speler1X = 100; // x-positie van speler
 var Speler1Y = 300; // y-positie van speler
 
 var KogelX = 650;    // x-positie van kogel
 var KogelY = 350;    // y-positie van kogel
+var KogelS = 5
 
 var Speler2X = 1150;   // x-positie van vijand
 var Speler2Y = 300;   // y-positie van vijand
@@ -62,12 +63,27 @@ if (keyIsDown(DOWN_ARROW)) {
         fill("orange");
   ellipse(KogelX, KogelY, 50, 50);
 
+  
+    if (KogelX > Speler2X-30 && KogelY>=Speler1Y-50) {
+        KogelS = -5;
+    }
+    if (KogelX < Speler1X+35) {
+        KogelS = 5;
+    }
 
-if (KogelY <= Speler2Y+150 && KogelY >= 50 && KogelX === Speler2X-10) {KogelX -=10}
-else {KogelX += 5};
-    
+    // move the ball
+    KogelX = KogelX + KogelS;
+
+
+
+ /*
+  if (KogelX>Speler2X-25 && KogelX<Speler2X && KogelY>=Speler2Y && KogelY<=Speler2Y+100)
+   {KogelX -= 10}
+KogelX += 5
+*/   
+
     fill("purple");
-    rect(100, Speler1Y, 20, 100);
+    rect(Speler1X, Speler1Y, 20, 100);
 
 if (keyIsDown(87)) {
     Speler1Y -= 5
